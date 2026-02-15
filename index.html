@@ -97,7 +97,7 @@ opacity:1;
 background:#FFD400;
 }
 
-/* MAP CARD */
+/* MAP */
 .map-container{
 padding:15px;
 background:#111;
@@ -116,7 +116,6 @@ border-radius:10px;
 border:none;
 }
 
-/* BUTTON MAP */
 .map-btn{
 display:block;
 margin:15px auto;
@@ -136,7 +135,6 @@ font-weight:bold;
 text-align:center;
 padding:15px;
 background:#0033A0;
-font-size:14px;
 }
 
 </style>
@@ -150,30 +148,29 @@ KATALOG PROMO ALFAMIDI AF85/GTA GUNUNG TUA
 </div>
 
 
-<!-- SLIDER -->
 <div class="slider-container">
 
 <div class="slider" id="slider">
 
-<div class="slide"><img src="file:///storage/emulated/0/project/images/1771124394759.jpg"></div>
-<div class="slide"><img src="file:///storage/emulated/0/project/images/1771124394736.jpg"></div>
-<div class="slide"><img src="file:///storage/emulated/0/project/images/1771124394718.jpg"></div>
-<div class="slide"><img src="file:///storage/emulated/0/project/images/1771124394698.jpg"></div>
-<div class="slide"><img src="file:///storage/emulated/0/project/images/1771124394679.jpg"></div>
-<div class="slide"><img src="file:///storage/emulated/0/project/images/1771124394661.jpg"></div>
-<div class="slide"><img src="file:///storage/emulated/0/project/images/1771124394642.jpg"></div>
-<div class="slide"><img src="file:///storage/emulated/0/project/images/1771124394622.jpg"></div>
-<div class="slide"><img src="file:///storage/emulated/0/project/images/1771124394601.jpg"></div>
-<div class="slide"><img src="file:///storage/emulated/0/project/images/1771124394581.jpg"></div>
-<div class="slide"><img src="file:///storage/emulated/0/project/images/1771124394561.jpg"></div>
-<div class="slide"><img src="file:///storage/emulated/0/project/images/1771124394541.jpg"></div>
-<div class="slide"><img src="file:///storage/emulated/0/project/images/1771124394521.jpg"></div>
-<div class="slide"><img src="file:///storage/emulated/0/project/images/1771124394502.jpg"></div>
-<div class="slide"><img src="file:///storage/emulated/0/project/images/1771124394485.png"></div>
-<div class="slide"><img src="file:///storage/emulated/0/project/images/1771124394401.jpg"></div>
-<div class="slide"><img src="file:///storage/emulated/0/project/images/1771124394383.jpg"></div>
-<div class="slide"><img src="file:///storage/emulated/0/project/images/1771124394364.jpg"></div>
-<div class="slide"><img src="file:///storage/emulated/0/project/images/1771124394348.png"></div>
+<div class="slide"><img src="images/1771124394759.jpg"></div>
+<div class="slide"><img src="images/1771124394736.jpg"></div>
+<div class="slide"><img src="images/1771124394718.jpg"></div>
+<div class="slide"><img src="images/1771124394698.jpg"></div>
+<div class="slide"><img src="images/1771124394679.jpg"></div>
+<div class="slide"><img src="images/1771124394661.jpg"></div>
+<div class="slide"><img src="images/1771124394642.jpg"></div>
+<div class="slide"><img src="images/1771124394622.jpg"></div>
+<div class="slide"><img src="images/1771124394601.jpg"></div>
+<div class="slide"><img src="images/1771124394581.jpg"></div>
+<div class="slide"><img src="images/1771124394561.jpg"></div>
+<div class="slide"><img src="images/1771124394541.jpg"></div>
+<div class="slide"><img src="images/1771124394521.jpg"></div>
+<div class="slide"><img src="images/1771124394502.jpg"></div>
+<div class="slide"><img src="images/1771124394485.png"></div>
+<div class="slide"><img src="images/1771124394401.jpg"></div>
+<div class="slide"><img src="images/1771124394383.jpg"></div>
+<div class="slide"><img src="images/1771124394364.jpg"></div>
+<div class="slide"><img src="images/1771124394348.png"></div>
 
 </div>
 
@@ -185,7 +182,6 @@ KATALOG PROMO ALFAMIDI AF85/GTA GUNUNG TUA
 <div class="dots" id="dots"></div>
 
 
-<!-- MAPS LIVE -->
 <div class="map-container">
 
 <div class="map-title">
@@ -194,15 +190,13 @@ Lokasi Alfamidi AF85/GTA Gunung Tua
 
 <iframe
 class="map-frame"
-src="https://maps.google.com/maps?q=Alfamidi%20Gunung%20Tua&t=&z=15&ie=UTF8&iwloc=&output=embed">
+src="https://maps.google.com/maps?q=Alfamidi%20Gunung%20Tua&output=embed">
 </iframe>
 
 <a href="https://www.google.com/maps/dir/?api=1&destination=Alfamidi+Gunung+Tua"
 target="_blank"
 class="map-btn">
-
 BUKA NAVIGASI KE TOKO
-
 </a>
 
 </div>
@@ -231,12 +225,9 @@ dotsContainer.appendChild(dot);
 let dots=document.querySelectorAll(".dot");
 
 function update(){
-
 slider.style.transform="translateX(-"+current*100+"%)";
-
 dots.forEach(dot=>dot.classList.remove("active"));
 dots[current].classList.add("active");
-
 }
 
 function next(){
@@ -260,13 +251,11 @@ startX=e.touches[0].clientX;
 
 slider.addEventListener("touchend",e=>{
 let endX=e.changedTouches[0].clientX;
-
 if(startX-endX>50) next();
 if(endX-startX>50) prev();
 });
 
 </script>
-
 
 </body>
 </html>
